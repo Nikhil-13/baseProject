@@ -1,7 +1,9 @@
 import {Dimensions} from 'react-native';
 
 export enum FONTS {
-  regular = 'System',
+  REGULAR = 'System',
+  MEDIUM = 'System',
+  BOLD = 'System',
 }
 
 const {height, width} = Dimensions.get('window');
