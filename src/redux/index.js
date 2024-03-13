@@ -16,7 +16,7 @@ const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 const store = configureStore({
   reducer: persistedReducer,
-  // middleware: [thunk],
+  middleware: thunk,
   // enhancers: compose(applyMiddleware(thunk), Reactotron.createEnhancer()),
 });
 
