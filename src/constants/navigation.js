@@ -3,8 +3,12 @@ export default {
   TABS: {
     MAIN: 'Tabs-MainTab',
   },
+  SCREENS: {
+    SAMPLE: 'Common-Sample',
+  },
   STACKS: {
     AUTH: 'Auth',
     TABS: 'Tabs',
+    COMMON: 'Common',
   },
 };

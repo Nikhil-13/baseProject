@@ -1,6 +1,7 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import AuthenticationStack from './stacks/authentication';
+import CommonStack from './stacks/common';
 import {NavigationService} from '../services';
 import {createStackNavigator} from '@react-navigation/stack';
 import config from './config';
@@ -26,6 +27,10 @@ class AppNavigator extends React.Component {
               component={AuthenticationStack}
             />
           )}
+          <Stack.Screen
+            name={NAVIGATION.STACKS.COMMON}
+            component={CommonStack}
+          />
         </Stack.Navigator>
       </NavigationContainer>
     );
