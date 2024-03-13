@@ -25,6 +25,7 @@ export const APIClient = () => {
   apiClient.interceptors.request.use(async config => {
     return config;
   });
+
   apiClient.interceptors.response.use(
     response => {
       return response;

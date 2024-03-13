@@ -3,16 +3,16 @@ import * as Yup from 'yup';
 
 const fields = {
   email: {
-    placeholder: 'PLACEHOLDERS.EMAIL',
+    placeholder: 'Email',
     type: 'email',
   },
   password: {
-    placeholder: 'PLACEHOLDERS.PASSWORD',
+    placeholder: 'Password',
     type: 'password',
     isPassword: true,
   },
   phoneNumber: {
-    placeholder: 'PLACEHOLDERS.PHONE_NUMBER',
+    placeholder: 'Phone Number',
     type: 'phoneNumber',
     keyboardType: 'phone-pad',
   },

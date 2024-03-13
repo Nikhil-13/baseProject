@@ -4,7 +4,7 @@ import thunk from 'redux-thunk';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import rootReducer from './rootReducer';
 import {persistReducer, persistStore} from 'redux-persist';
-// import Reactotron from '../../reactotron.config';
+import Reactotron from '../../reactotron.config';
 
 const persistConfig = {
   key: 'root',

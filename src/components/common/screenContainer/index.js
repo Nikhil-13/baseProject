@@ -3,12 +3,14 @@ import {View} from 'react-native';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import styles from './styles';
 import {SharedStyles} from '../../../shared';
+import {COLORS, SCREEN_PADDING} from '../../../constants';
 
 export default ({
   children,
   center = false,
   backgroundColor = '',
   paddingHorizontal = '',
+  paddingal = '',
   noPaddingTop = false,
   noPaddingBottom = false,
 }) => {
@@ -23,7 +25,9 @@ export default ({
         {
           paddingTop: !!noPaddingTop ? 0 : insets.top,
           paddingBottom: !!noPaddingBottom ? 0 : insets.bottom,
-          backgroundColor: !!backgroundColor ? backgroundColor : COLORS.WHITE,
+          backgroundColor: !!backgroundColor
+            ? backgroundColor
+            : COLORS.SOLID.WHITE,
           paddingHorizontal: !!paddingHorizontal ? 0 : SCREEN_PADDING,
         },
       ]}>
