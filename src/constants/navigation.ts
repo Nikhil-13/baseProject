@@ -1,14 +1,18 @@
 export default {
-  AUTH: {WELCOME_SCREEN: 'Auth-WelcomeScreen'},
+  AUTH: {
+    WELCOME_SCREEN: 'Screen-Welcome',
+  },
   TABS: {
-    MAIN: 'Tabs-MainTab',
+    HOME: 'Tab-HomeScreen',
+    PROFILE: 'Tab-ProfileScreen',
   },
-  SCREENS: {
-    SAMPLE: 'Common-Sample',
-  },
+  DRAWER: 'Main-Drawer',
   STACKS: {
     AUTH: 'Auth',
     TABS: 'Tabs',
     COMMON: 'Common',
+  },
+  SCREENS: {
+    WELCOME_SCREEN: 'Screen-Welcome',
   },
 };
