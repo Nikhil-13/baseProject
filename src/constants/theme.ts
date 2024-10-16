@@ -1,4 +1,5 @@
 import {Dimensions} from 'react-native';
+import {fontScale} from './responsive';
 
 export enum FONTS {
   REGULAR = 'Inter Regular',
@@ -38,9 +39,9 @@ export const COLORS = {
 };
 
 export const FONT_SIZE = {
-  SM: 12,
-  MD: 16,
-  LG: 20,
+  SM: fontScale(12),
+  MD: fontScale(16),
+  LG: fontScale(20),
 };
 
 export const SCREEN_PADDING = 20;

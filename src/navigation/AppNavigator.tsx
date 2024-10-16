@@ -10,7 +10,7 @@ const Stack = createStackNavigator();
 const AppNavigator = () => {
   return (
     <Stack.Navigator screenOptions={{...stackConfig}}>
-      {false ? (
+      {true ? (
         <Stack.Screen name="AUTH" component={AuthStack} />
       ) : (
         <Stack.Screen name="Tabs" component={bottomTabStack} />

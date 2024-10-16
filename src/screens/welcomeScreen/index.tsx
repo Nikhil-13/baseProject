@@ -1,12 +1,22 @@
 import {View, Text} from 'react-native';
-import React from 'react';
+import React, {useEffect} from 'react';
 import styles from './styles';
+import {ScreenContainer} from '../../components';
+import {usePermissions} from '../../hooks/usePermissions';
 
 const WelcomeScreen = () => {
+  const {getAllPermission} = usePermissions();
+
+  useEffect(() => {
+    getAllPermission();
+  }, []);
+
   return (
-    <View style={styles.root}>
-      <Text>Welcome</Text>
-    </View>
+    <ScreenContainer>
+      <View style={styles.root}>
+        <Text>Welcome</Text>
+      </View>
+    </ScreenContainer>
   );
 };
 

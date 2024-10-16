@@ -1,8 +1,9 @@
+/* eslint-disable react/no-unstable-nested-components */
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import navigationConfig from '../navigationConfig';
 import {getBottomTabs} from './config';
-import CustomTabBar from '../../components/common/customTabBar';
+import {CustomTabBar} from '../../components';
 
 const BottomTabs = createBottomTabNavigator();
 

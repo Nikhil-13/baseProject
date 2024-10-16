@@ -3,8 +3,9 @@ import {Text, TouchableOpacity, View} from 'react-native';
 import {styles} from './styles';
 import {NAVIGATION} from '../../../constants';
 import {HomeIcon, ProfileIcon} from '../../../assets/svg';
+import {heightScale} from '../../../constants/responsive';
 
-const CustomTabBar = ({state, navigation}) => {
+export default ({state, navigation}) => {
   const onPress = useCallback(
     (route, index) => {
       const isFocused = state.index === index;
@@ -32,12 +33,18 @@ const CustomTabBar = ({state, navigation}) => {
             onPress={() => onPress(route, index)}>
             {route.name === NAVIGATION.TABS.HOME ? (
               <View style={styles.barIconContainer}>
-                <HomeIcon size={24} color={isFocused ? 'red' : 'white'} />
+                <HomeIcon
+                  size={heightScale(24)}
+                  color={isFocused ? 'red' : 'white'}
+                />
                 <Text>{route.name}</Text>
               </View>
             ) : (
               <View style={styles.barIconContainer}>
-                <ProfileIcon size={24} color={isFocused ? 'red' : 'white'} />
+                <ProfileIcon
+                  size={heightScale(24)}
+                  color={isFocused ? 'red' : 'white'}
+                />
                 <Text>{route.name}</Text>
               </View>
             )}
@@ -47,5 +54,3 @@ const CustomTabBar = ({state, navigation}) => {
     </View>
   );
 };
-
-export default CustomTabBar;

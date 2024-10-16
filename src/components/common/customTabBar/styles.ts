@@ -1,17 +1,17 @@
-import {Dimensions, Platform, StyleSheet} from 'react-native';
-const {height: SCREEN_HEIGHT, width: SCREEN_WIDTH} = Dimensions.get('window');
+import {Platform, StyleSheet} from 'react-native';
+import {heightScale, SCREEN_WIDTH} from '../../../constants/responsive';
 
 export const styles = StyleSheet.create({
   rootContainer: {
     flexDirection: 'row',
-    height: 83,
+    height: heightScale(83),
     width: SCREEN_WIDTH,
     backgroundColor: 'green',
     shadowColor: 'black',
     shadowOpacity: Platform.select({android: 0.6, ios: 0.3}),
     shadowOffset: {height: Platform.select({android: -5, ios: 0})},
-    elevation: 20,
-    shadowRadius: 12,
+    elevation: heightScale(20),
+    shadowRadius: heightScale(12),
   },
   button: {
     flex: 1,
@@ -22,6 +22,6 @@ export const styles = StyleSheet.create({
     height: '100%',
     justifyContent: 'center',
     alignItems: 'center',
-    gap: 5,
+    gap: heightScale(5),
   },
 });
