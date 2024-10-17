@@ -27,6 +27,8 @@ export const testThunk = createAsyncThunk(
   },
 );
 
-export const testSelector = state => state.auth.test;
+export const testSelector = state => state.auth?.test;
+
+export const {testReducer} = authSlice.actions;
 
 export default authSlice.reducer;

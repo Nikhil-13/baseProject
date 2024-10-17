@@ -13,10 +13,7 @@ export const usePermissions = () => {
       isDenyCase = false;
     try {
       const permissionArray = Platform.select({
-        android:
-          Platform.constants['Release'] >= '13'
-            ? [PERMISSIONS.ANDROID.CAMERA]
-            : [PERMISSIONS.ANDROID.CAMERA],
+        android: [PERMISSIONS.ANDROID.CAMERA],
         ios: [PERMISSIONS.IOS.CAMERA],
       });
       const statuses = await requestMultiple(permissionArray);
