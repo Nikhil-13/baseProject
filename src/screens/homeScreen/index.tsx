@@ -4,7 +4,7 @@ import styles from './styles';
 import {DrawerActions, useNavigation} from '@react-navigation/native';
 import {ScreenContainer} from '../../components';
 import {useDispatch} from 'react-redux';
-import {testReducer} from '../../slices/auth.slice';
+import {testReducer} from '../../redux/slices/auth.slice';
 
 const HomeScreen = () => {
   const navigation = useNavigation();

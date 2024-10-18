@@ -6,24 +6,21 @@ import DrawerNavigator from './src/navigation/drawer';
 import {NavigationContainer} from '@react-navigation/native';
 import {I18nextProvider} from 'react-i18next';
 import i18n from './src/locales';
-import {getPersistor, getStore} from './src/slices/store';
+import {persistor, store} from './src/redux/store';
 
 const App = () => {
-  const store = getStore();
-  const persistor = getPersistor();
-
   return (
-    <SafeAreaProvider>
-      <I18nextProvider i18n={i18n} defaultNS={'translation'}>
-        <Provider store={store}>
-          <PersistGate persistor={persistor}>
-            <NavigationContainer>
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        <NavigationContainer>
+          <SafeAreaProvider>
+            <I18nextProvider i18n={i18n} defaultNS={'translation'}>
               <DrawerNavigator />
-            </NavigationContainer>
-          </PersistGate>
-        </Provider>
-      </I18nextProvider>
-    </SafeAreaProvider>
+            </I18nextProvider>
+          </SafeAreaProvider>
+        </NavigationContainer>
+      </PersistGate>
+    </Provider>
   );
 };
 

@@ -5,7 +5,7 @@ import {ScreenContainer} from '../../components';
 import {usePermissions} from '../../hooks/usePermissions';
 import {useTranslation} from 'react-i18next';
 import {useDispatch} from 'react-redux';
-import {testReducer} from '../../slices/auth.slice';
+import {testReducer} from '../../redux/slices/auth.slice';
 
 const WelcomeScreen = () => {
   const {getAllPermission} = usePermissions();

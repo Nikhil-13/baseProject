@@ -5,7 +5,7 @@ import CommonStack from './stacks/commonStack';
 import stackConfig from './navigationConfig';
 import bottomTabStack from './tabs/bottomTabStack';
 import {useSelector} from 'react-redux';
-import {testSelector} from '../slices/auth.slice';
+import {testSelector} from '../redux/slices/auth.slice';
 
 const Stack = createStackNavigator();
 
@@ -14,7 +14,7 @@ const AppNavigator = () => {
 
   return (
     <Stack.Navigator screenOptions={{...stackConfig}}>
-      {!!testId ? (
+      {!testId ? (
         <Stack.Screen name="AUTH" component={AuthStack} />
       ) : (
         <Stack.Screen name="Tabs" component={bottomTabStack} />
