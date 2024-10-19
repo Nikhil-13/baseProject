@@ -5,10 +5,11 @@ import {Provider} from 'react-redux';
 import DrawerNavigator from './src/navigation/drawer';
 import {NavigationContainer} from '@react-navigation/native';
 import {I18nextProvider} from 'react-i18next';
-import i18n from './src/locales';
 import {persistor, store} from './src/redux/store';
+import {useLocalization} from './src/hooks/useLocalization';
 
 const App = () => {
+  const {i18n} = useLocalization();
   return (
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
