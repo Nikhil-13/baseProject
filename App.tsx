@@ -6,7 +6,7 @@ import DrawerNavigator from './src/navigation/drawer';
 import {NavigationContainer} from '@react-navigation/native';
 import {I18nextProvider} from 'react-i18next';
 import {persistor, store} from './src/redux/store';
-import {useLocalization} from './src/hooks/useLocalization';
+import {useLocalization} from './src/hooks';
 
 const App = () => {
   const {i18n} = useLocalization();

@@ -7,7 +7,7 @@ import {
   Permission,
 } from 'react-native-permissions';
 
-export const usePermissions = () => {
+export default () => {
   const getAllPermission = async () => {
     let isBlockCase = false,
       isDenyCase = false;
