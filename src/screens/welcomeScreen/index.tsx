@@ -1,11 +1,12 @@
 import {View, Text, Button} from 'react-native';
 import React, {useEffect} from 'react';
 import styles from './styles';
-import {ScreenContainer} from '../../components';
+import {ScreenContainer, StyledText} from '../../components';
 import {usePermissions} from '../../hooks/usePermissions';
 import {useTranslation} from 'react-i18next';
 import {useDispatch} from 'react-redux';
 import {testReducer} from '../../redux/slices/auth.slice';
+import {FONTS} from '../../constants';
 
 const WelcomeScreen = () => {
   const {getAllPermission} = usePermissions();
@@ -19,7 +20,7 @@ const WelcomeScreen = () => {
   return (
     <ScreenContainer>
       <View style={styles.root}>
-        <Text>Welcome {t('NAME')}</Text>
+        {/* <StyledText>Welcome {t('NAME')}</StyledText> */}
         <Button
           title={t('BUTTONS.LOGIN')}
           onPress={() => {

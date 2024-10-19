@@ -7,7 +7,9 @@ import App from './App';
 import {name as appName} from './app.json';
 
 if (__DEV__) {
-  require('./reactotron.config');
+  import('./reactotron.config').then(() =>
+    console.log('[REACTOTRON] - Configured!'),
+  );
 }
 
 AppRegistry.registerComponent(appName, () => App);

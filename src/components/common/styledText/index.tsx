@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, Text, StyleProp, TextStyle, ViewStyle} from 'react-native';
-import {FONT_SIZE, FONTS} from '../../../constants/theme';
+import {FONT_SIZE, FONTS} from '../../../constants';
 
 interface StyleTextProps {
   children: React.ReactNode;
@@ -19,7 +19,6 @@ export default (): React.FC<StyleTextProps> =>
   ({
     children,
     onLayout,
-    variant = 'REGULAR',
     size = FONT_SIZE.MD,
     color = 'black',
     lineHeight,
@@ -30,7 +29,7 @@ export default (): React.FC<StyleTextProps> =>
     ...props
   }) => {
     const style = {
-      fontFamily: FONTS[variant],
+      fontFamily: FONTS.DancingScript.bold,
       color: color,
       fontSize: size,
       lineHeight,

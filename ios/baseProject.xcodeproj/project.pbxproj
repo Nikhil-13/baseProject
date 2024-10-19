@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* baseProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* baseProjectTests.m */; };
+		04B1D334916A4AB09014F2DA /* DancingScript-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F1BB1EAB1C884F119E7769ED /* DancingScript-Medium.ttf */; };
 		0C80B921A6F3F58F76C31292 /* libPods-baseProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-baseProject.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
@@ -15,6 +16,10 @@
 		3602D25B99DA9CA6B3B53E94 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = E24E1FF0FD639BA0DF8D7ABE /* PrivacyInfo.xcprivacy */; };
 		7699B88040F8A987B510C191 /* libPods-baseProject-baseProjectTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-baseProject-baseProjectTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		9E1738873B9844538710A3CB /* DancingScript-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E94630D65054457B992715B /* DancingScript-Bold.ttf */; };
+		D8755DB35E054ADDB4E02291 /* PlaywriteGBS-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0ABE89ABC7604E06BC16B6BB /* PlaywriteGBS-Regular.ttf */; };
+		E7481B1F095A48758F9EFA7F /* DancingScript-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 174F0A0F6DD84EB9BB03C4D9 /* DancingScript-Regular.ttf */; };
+		F7E4CA1ED9AF486582259B77 /* PlaywriteGBS-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D32DAFEE31E64DF0A6EE1659 /* PlaywriteGBS-Light.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +36,7 @@
 		00E356EE1AD99517003FC87E /* baseProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = baseProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* baseProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = baseProjectTests.m; sourceTree = "<group>"; };
+		0ABE89ABC7604E06BC16B6BB /* PlaywriteGBS-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "PlaywriteGBS-Regular.ttf"; path = "../src/assets/fonts/PlaywriteGBS-Regular.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* baseProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = baseProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = baseProject/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = baseProject/AppDelegate.mm; sourceTree = "<group>"; };
@@ -38,15 +44,19 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = baseProject/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = baseProject/main.m; sourceTree = "<group>"; };
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = baseProject/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		174F0A0F6DD84EB9BB03C4D9 /* DancingScript-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "DancingScript-Regular.ttf"; path = "../src/assets/fonts/DancingScript-Regular.ttf"; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-baseProject-baseProjectTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-baseProject-baseProjectTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B4392A12AC88292D35C810B /* Pods-baseProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-baseProject.debug.xcconfig"; path = "Target Support Files/Pods-baseProject/Pods-baseProject.debug.xcconfig"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-baseProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-baseProject.release.xcconfig"; path = "Target Support Files/Pods-baseProject/Pods-baseProject.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-baseProject-baseProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-baseProject-baseProjectTests.debug.xcconfig"; path = "Target Support Files/Pods-baseProject-baseProjectTests/Pods-baseProject-baseProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-baseProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-baseProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E94630D65054457B992715B /* DancingScript-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "DancingScript-Bold.ttf"; path = "../src/assets/fonts/DancingScript-Bold.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = baseProject/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-baseProject-baseProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-baseProject-baseProjectTests.release.xcconfig"; path = "Target Support Files/Pods-baseProject-baseProjectTests/Pods-baseProject-baseProjectTests.release.xcconfig"; sourceTree = "<group>"; };
+		D32DAFEE31E64DF0A6EE1659 /* PlaywriteGBS-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "PlaywriteGBS-Light.ttf"; path = "../src/assets/fonts/PlaywriteGBS-Light.ttf"; sourceTree = "<group>"; };
 		E24E1FF0FD639BA0DF8D7ABE /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = baseProject/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		F1BB1EAB1C884F119E7769ED /* DancingScript-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "DancingScript-Medium.ttf"; path = "../src/assets/fonts/DancingScript-Medium.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +121,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5E7AC39910F34734ACD1CBF0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5E94630D65054457B992715B /* DancingScript-Bold.ttf */,
+				F1BB1EAB1C884F119E7769ED /* DancingScript-Medium.ttf */,
+				174F0A0F6DD84EB9BB03C4D9 /* DancingScript-Regular.ttf */,
+				D32DAFEE31E64DF0A6EE1659 /* PlaywriteGBS-Light.ttf */,
+				0ABE89ABC7604E06BC16B6BB /* PlaywriteGBS-Regular.ttf */,
+			);
+			name = Resources;
+			path = "";
+			sourceTree = "<group>";
+		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +150,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				5E7AC39910F34734ACD1CBF0 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -249,6 +273,11 @@
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				3602D25B99DA9CA6B3B53E94 /* PrivacyInfo.xcprivacy in Resources */,
+				9E1738873B9844538710A3CB /* DancingScript-Bold.ttf in Resources */,
+				04B1D334916A4AB09014F2DA /* DancingScript-Medium.ttf in Resources */,
+				E7481B1F095A48758F9EFA7F /* DancingScript-Regular.ttf in Resources */,
+				F7E4CA1ED9AF486582259B77 /* PlaywriteGBS-Light.ttf in Resources */,
+				D8755DB35E054ADDB4E02291 /* PlaywriteGBS-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -2,17 +2,24 @@ import Reactotron from 'reactotron-react-native';
 import {reactotronRedux} from 'reactotron-redux';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-export default Reactotron.setAsyncStorageHandler(AsyncStorage)
+// Enhance logging with display, monitor state, and performance tracking
+const reactotron = Reactotron.setAsyncStorageHandler(AsyncStorage)
   .configure()
-  .use(reactotronRedux())
+  .use(reactotronRedux()) // Redux plugin for tracking actions and state
   .useReactNative({
-    asyncStorage: false, // there are more options to the async storage.
+    asyncStorage: {ignore: ['secret_key']}, // Ignore sensitive keys in
     networking: {
-      // optionally, you can turn it off with false.
-      ignoreUrls: /symbolicate/,
+      ignoreUrls: /symbolicate|127\.0\.0\.1/, // Ignore specific URLs like symbolication and local calls
     },
-    editor: false, // there are more options to editor
-    errors: {veto: stackFrame => false}, // or turn it off with false
-    overlay: false, // just turning off overlay
+    editor: false, // No need for editor integration
+    errors: {veto: stackFrame => false}, // Show all errors
+    overlay: {visible: true, color: '#e74c3c'}, // Enable overlay for
   })
   .connect();
+
+// Clearing logs when app refreshes for better debugging
+if (__DEV__) {
+  Reactotron.clear();
+}
+
+export default reactotron;
