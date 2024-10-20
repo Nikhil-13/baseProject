@@ -46,6 +46,9 @@ end
 target 'baseProject' do
   config = use_native_modules!
 
+  # Env variables config using react-native-config 
+  pod 'react-native-config/Extension', :path => '../node_modules/react-native-config'
+
   use_react_native!(
     :path => config[:reactNativePath],
     # An absolute path to your application root.

@@ -10,9 +10,17 @@ import {useLocalization} from './src/hooks';
 
 const App = () => {
   const {i18n} = useLocalization();
+
+  const onBeforeLift = () => {
+    // Do something before store gets emtpy
+  };
+
   return (
     <Provider store={store}>
-      <PersistGate loading={null} persistor={persistor}>
+      <PersistGate
+        loading={null}
+        persistor={persistor}
+        onBeforeLift={onBeforeLift}>
         <NavigationContainer>
           <SafeAreaProvider>
             <I18nextProvider i18n={i18n} defaultNS={'translation'}>

@@ -6,6 +6,7 @@ import {useTranslation} from 'react-i18next';
 import {useDispatch} from 'react-redux';
 import {testReducer} from '../../redux/slices/auth.slice';
 import {usePermissions} from '../../hooks';
+import {ENV} from '../../constants';
 
 const WelcomeScreen = () => {
   const {getAllPermission} = usePermissions();
@@ -20,6 +21,7 @@ const WelcomeScreen = () => {
     <ScreenContainer>
       <View style={styles.root}>
         <StyledText>Welcome {t('NAME')}</StyledText>
+        <StyledText>{ENV.API_URL}</StyledText>
         <Button
           title={t('BUTTONS.LOGIN')}
           onPress={() => {
