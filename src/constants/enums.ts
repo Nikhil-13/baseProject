@@ -1,4 +1,4 @@
-export default {
+export const NAVIGATION = {
   AUTH: {
     WELCOME_SCREEN: 'Screen-Welcome',
   },

@@ -2,8 +2,8 @@
 import React from 'react';
 import {View} from 'react-native';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
-import styles from './styles';
 import {heightScale} from '../../../constants/responsive';
+import {styles} from './styles';
 
 export default ({
   children,

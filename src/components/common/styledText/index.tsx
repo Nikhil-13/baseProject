@@ -15,7 +15,7 @@ interface StyleTextProps {
   onPress?: () => void;
 }
 
-const StyledText: React.FC<StyleTextProps> = ({
+export default ({
   children,
   onLayout,
   size = FONT_SIZE.MD,
@@ -26,7 +26,7 @@ const StyledText: React.FC<StyleTextProps> = ({
   onPress = undefined,
   containerStyle,
   ...props
-}) => {
+}: StyleTextProps) => {
   const style = {
     color: color,
     fontSize: size,
@@ -42,5 +42,3 @@ const StyledText: React.FC<StyleTextProps> = ({
     </View>
   );
 };
-
-export default StyledText;
