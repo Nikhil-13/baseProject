@@ -1,7 +1,7 @@
-import {View, Button, Text} from 'react-native';
+import {View, Button} from 'react-native';
 import React, {useEffect} from 'react';
 import styles from './styles';
-import {ScreenContainer} from '../../components';
+import {ScreenContainer, StyledText} from '../../components';
 import {useTranslation} from 'react-i18next';
 import {useDispatch} from 'react-redux';
 import {testReducer} from '../../redux/slices/auth.slice';
@@ -19,7 +19,7 @@ const WelcomeScreen = () => {
   return (
     <ScreenContainer>
       <View style={styles.root}>
-        <Text>Welcome {t('NAME')}</Text>
+        <StyledText>Welcome {t('NAME')}</StyledText>
         <Button
           title={t('BUTTONS.LOGIN')}
           onPress={() => {

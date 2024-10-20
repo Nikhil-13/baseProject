@@ -15,32 +15,32 @@ interface StyleTextProps {
   onPress?: () => void;
 }
 
-export default (): React.FC<StyleTextProps> =>
-  ({
-    children,
-    onLayout,
-    size = FONT_SIZE.MD,
-    color = 'black',
+const StyledText: React.FC<StyleTextProps> = ({
+  children,
+  onLayout,
+  size = FONT_SIZE.MD,
+  color = 'black',
+  lineHeight,
+  textStyle,
+  textAlign = 'left',
+  onPress = undefined,
+  containerStyle,
+  ...props
+}) => {
+  const style = {
+    color: color,
+    fontSize: size,
     lineHeight,
-    textStyle,
-    textAlign = 'left',
-    onPress = undefined,
-    containerStyle,
-    ...props
-  }) => {
-    const style = {
-      fontFamily: FONTS.DancingScript.bold,
-      color: color,
-      fontSize: size,
-      lineHeight,
-      textAlign,
-    };
-
-    return (
-      <View onLayout={onLayout} style={containerStyle}>
-        <Text onPress={onPress} style={[style, textStyle]} {...props}>
-          {children}
-        </Text>
-      </View>
-    );
+    textAlign,
   };
+
+  return (
+    <View onLayout={onLayout} style={containerStyle}>
+      <Text onPress={onPress} style={[style, textStyle]} {...props}>
+        {children}
+      </Text>
+    </View>
+  );
+};
+
+export default StyledText;
