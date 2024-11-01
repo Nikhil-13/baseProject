@@ -1,4 +1,5 @@
 import {createAsyncThunk, createSlice} from '@reduxjs/toolkit';
+import {createSelector} from 'reselect';
 
 const initialState = {
   test: null,
@@ -27,7 +28,9 @@ export const testThunk = createAsyncThunk(
   },
 );
 
-export const testSelector = state => state.auth?.test;
+const authState = state => state.auth;
+
+export const testSelector = createSelector([authState], state => state.test);
 
 export const {testReducer} = authSlice.actions;
 
