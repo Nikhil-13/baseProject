@@ -12,11 +12,13 @@ export default () => {
     let isBlockCase = false,
       isDenyCase = false;
     try {
-      const permissionArray = Platform.select({
-        android: [PERMISSIONS.ANDROID.CAMERA],
-        ios: [PERMISSIONS.IOS.CAMERA],
-      });
+      const permissionArray: Permission[] =
+        Platform.select({
+          android: [PERMISSIONS.ANDROID.CAMERA],
+          ios: [PERMISSIONS.IOS.CAMERA],
+        }) || [];
       const statuses = await requestMultiple(permissionArray);
+      permissionArray;
       for (let i = 0; i < permissionArray.length; i++) {
         if (
           statuses[permissionArray[i]] === RESULTS.BLOCKED ||

@@ -1,9 +1,17 @@
 /* eslint-disable react-native/no-inline-styles */
-import React from 'react';
+import React, {ReactNode} from 'react';
 import {View} from 'react-native';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import {heightScale} from '../../../constants/responsive';
 import {styles} from './styles';
+
+interface props {
+  children?: ReactNode;
+  backgroundColor?: string;
+  paddingHorizontal?: string;
+  noPaddingTop?: boolean;
+  noPaddingBottom?: boolean;
+}
 
 export default ({
   children,
@@ -11,7 +19,7 @@ export default ({
   paddingHorizontal = '',
   noPaddingTop = false,
   noPaddingBottom = false,
-}) => {
+}: props) => {
   const insets = useSafeAreaInsets();
 
   return (

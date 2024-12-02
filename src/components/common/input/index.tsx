@@ -1,25 +1,40 @@
-import React, {useCallback, forwardRef} from 'react';
-import {View, Text, Pressable, TextInput} from 'react-native';
+import React, {useCallback, forwardRef, ReactElement, Ref} from 'react';
+import {View, Text, Pressable, TextInput, ViewStyle} from 'react-native';
 import {styles} from './styles';
+
+interface props {
+  value: string;
+  error: string;
+  label: string;
+  placeholderTextColor: string;
+  placeholder: string;
+  isPassword: boolean;
+  editable: boolean;
+  containerStyles: ViewStyle;
+  showErrorPadding: boolean;
+  rightIcon: ReactElement | null;
+  onChangeText?: () => {};
+  onPress?: () => {};
+  onFocus?: () => {};
+  onBlur?: () => {};
+}
 
 export default forwardRef(
   (
     {
-      error,
+      error = '',
       isPassword = false,
       editable = true,
       onPress,
-      label = '',
       value = '',
       onChangeText = undefined,
       rightIcon = null,
       placeholder = '',
       placeholderTextColor = 'black',
       containerStyles = {},
-      showErrorPadding = true,
       ...props
-    },
-    ref,
+    }: props,
+    ref: Ref<TextInput>,
   ) => {
     const onFocusHandler = useCallback(() => {
       props?.onFocus?.();
@@ -31,7 +46,6 @@ export default forwardRef(
       },
       [props?.onBlur],
     );
-
     return (
       <Pressable style={[styles.main, containerStyles]} onPress={onPress}>
         <View style={styles.inputWrapper}>
@@ -48,7 +62,9 @@ export default forwardRef(
             onBlur={onBlurHandler}
             onFocus={onFocusHandler}
             style={{color: 'red'}}
+            secureTextEntry={isPassword}
           />
+          {rightIcon && rightIcon}
         </View>
         <View style={styles.errorContainer}>
           <Text style={styles.errorText}>{!!error && error}</Text>

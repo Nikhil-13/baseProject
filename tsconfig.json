@@ -2,15 +2,15 @@
   "extends": "@react-native/typescript-config/tsconfig.json",
   "compilerOptions": {
     "jsx": "react-native",
-    "target": "esnext",                      // Ensures compatibility with modern JS features.
-    "module": "esnext",                      // Uses ESNext modules for better tree-shaking in bundlers.
-    "lib": ["esnext"],                       // Includes the latest JS features and APIs.
-    "allowJs": true,                         // Allows using JavaScript files in the project.
-    "skipLibCheck": true,                    // Skips type-checking of declaration files, improving build time.
-    "noEmit": true,                          // Avoids generating output files; this is handled by Metro bundler.
-    "strict": true,                          // Enables all strict type-checking options.
-    "esModuleInterop": true,                 // Enables interoperability between CommonJS and ES modules.
-    "isolatedModules": true,                 // Ensures each file can be transpiled independently (required by Metro).
+    // "target": "esnext",                      // Ensures compatibility with modern JS features.
+    // "module": "esnext",                      // Uses ESNext modules for better tree-shaking in bundlers.
+    // "lib": ["esnext"],                       // Includes the latest JS features and APIs.
+    // "allowJs": true,                         // Allows using JavaScript files in the project.
+    // "skipLibCheck": true,                    // Skips type-checking of declaration files, improving build time.
+    // "noEmit": true,                          // Avoids generating output files; this is handled by Metro bundler.
+    // "strict": true,                          // Enables all strict type-checking options.
+    // "esModuleInterop": true,                 // Enables interoperability between CommonJS and ES modules.
+    // "isolatedModules": true,                 // Ensures each file can be transpiled independently (required by Metro).
     "allowSyntheticDefaultImports": true,    // Allows importing modules with default exports.
     "resolveJsonModule": true,               // Allows importing JSON files as modules.
     "types": ["node", "react", "react-native"], // Ensures React Native types are included.

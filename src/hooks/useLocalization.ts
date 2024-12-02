@@ -4,6 +4,8 @@ import en from '../locales/en.json';
 import hi from '../locales/hi.json';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
+type lang = 'en' | 'hi';
+
 export default () => {
   const resources = {
     en: {
@@ -29,7 +31,7 @@ export default () => {
 
   initializeI18n();
 
-  const changeLanguage = language => {
+  const changeLanguage = (language: lang) => {
     i18n
       .changeLanguage(language)
       .then(() => AsyncStorage.setItem('lng', language));

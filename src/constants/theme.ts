@@ -1,4 +1,4 @@
-import {Dimensions, Platform} from 'react-native';
+import {Dimensions} from 'react-native';
 import {fontScale} from './responsive';
 
 export const FONTS = {

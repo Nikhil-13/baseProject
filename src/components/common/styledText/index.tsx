@@ -1,15 +1,15 @@
-import React from 'react';
-import {View, Text, StyleProp, TextStyle, ViewStyle} from 'react-native';
+import React, {ReactNode} from 'react';
+import {View, Text, TextStyle, ViewStyle} from 'react-native';
 import {FONT_SIZE, FONTS} from '../../../constants';
 
 interface StyleTextProps {
-  children: React.ReactNode;
+  children: ReactNode;
   variant?: keyof typeof FONTS;
   size?: number;
   color?: string;
   textAlign?: 'left' | 'right' | 'center';
-  textStyle?: StyleProp<TextStyle>;
-  containerStyle?: StyleProp<ViewStyle>;
+  textStyle?: TextStyle;
+  containerStyle?: ViewStyle;
   onLayout?: () => void;
   lineHeight?: number;
   onPress?: () => void;

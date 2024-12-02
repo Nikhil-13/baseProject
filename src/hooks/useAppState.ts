@@ -6,14 +6,15 @@ export default () => {
   const onActiveCallbackRef = useRef(null);
 
   // Set a callback to run when the app goes to the background
-  const setOnCloseCallback = callback => {
+  const setOnCloseCallback = (callback: () => {}) => {
     onCloseCallbackRef.current = callback;
   };
-  const setOnActiveCallback = callback => {
+  // Set a callback to run when the app comes into foreground
+  const setOnActiveCallback = (callback: () => {}) => {
     onActiveCallbackRef.current = callback;
   };
 
-  const handleAppStateChange = nextAppState => {
+  const handleAppStateChange = (nextAppState: string) => {
     if (nextAppState === 'background') {
       if (onCloseCallbackRef.current) {
         onCloseCallbackRef.current();
